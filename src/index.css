@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-porcelain: #f7f4ee;
+  --color-ivory: #d9d0bd;
+  --color-sand: #cec2a3;
+  --color-champagne: #c6ba9e;
+  --color-gold-soft: #b5a68a;
+  --color-gold-primary: #7c6338;
+
+  --color-bg-primary: var(--color-porcelain);
+  --color-bg-secondary: var(--color-ivory);
+  --color-bg-tertiary: var(--color-sand);
+  --color-bg-card: rgba(217, 208, 189, 0.6);
+  --color-bg-overlay: rgba(44, 42, 38, 0.35);
+
+  --color-text-primary: #2c2a26;
+  --color-text-secondary: #6e6656;
+  --color-text-muted: #9c927d;
+  --color-text-inverse: var(--color-porcelain);
+
+  --color-accent-primary: var(--color-gold-primary);
+  --color-accent-soft: var(--color-gold-soft);
+
+  --color-border-light: rgba(124, 99, 56, 0.18);
+  --color-border-medium: rgba(124, 99, 56, 0.35);
+
+  --shadow-sm: 0 4px 12px rgba(44, 42, 38, 0.08);
+  --shadow-md: 0 10px 30px rgba(124, 99, 56, 0.25);
+  --shadow-lg: 0 20px 60px rgba(124, 99, 56, 0.35);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --font-heading: "Playfair Display SC", "Playfair Display", "Cormorant Garamond", serif;
+  --font-body: "Inter", "Pretendard", system-ui, -apple-system, sans-serif;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+
+  /* Missing button vars inferred or defined */
+  --btn-primary-bg: var(--color-gold-primary);
+  --btn-primary-text: var(--color-porcelain);
+  --btn-primary-bg-hover: #5e4b2a;
+  /* darker gold */
+}
+
+/* Root Boilerplate / Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms ease;
+}
+
+html.dark {
+  --color-bg-primary: #121212;
+  --color-bg-secondary: #1e1e1e;
+  --color-bg-tertiary: #2a2a2a;
+  --color-bg-card: #1e1e1e;
+
+  --color-text-primary: #f6f4ee;
+  /* lightly adjusted from porcelain for dark mode context if needed, or kept same */
+  --color-text-secondary: #b5a68a;
+  --color-text-muted: #7c6338;
+  --color-text-inverse: #121212;
+
+  --color-border-light: rgba(255, 255, 255, 0.08);
+  --color-border-medium: rgba(255, 255, 255, 0.15);
+
+  /* Update vars pointing to base colors if needed, but the main ones are overridden here */
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: var(--tracking-tight);
+}
+
+.button-primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  transition: var(--transition-base);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-primary:hover {
+  background: var(--btn-primary-bg-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
