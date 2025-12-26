@@ -64,6 +64,18 @@
   --transition-slow: 500ms ease;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 html.dark {
   --color-bg-primary: #121212;
   --color-bg-secondary: #1e1e1e;
