@@ -52,7 +52,7 @@ const Carousel = () => {
 
     return (
         <div
-            className="relative w-full h-[80vh] overflow-hidden bg-[var(--color-bg-secondary)] group"
+            className="relative w-full h-[80vh] overflow-hidden bg-[var(--color-bg-secondary)] group rounded-[var(--radius-lg)]"
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
         >

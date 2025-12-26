@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from "../assets/image/micha-logo.jpeg"
 const Nav = () => {
     return (
-        <div className='h-16 flex justify-between bg-[var(--color-sand)] font-medium items-center w-full px-4'>
+        <div className='h-16 flex justify-between bg-[var(--color-sand)] font-medium items-center w-full '>
             <div className='flex w-[10%] justify-between items-center'>
                 <img src={logo} alt="Logo" className="max-h-12 rounded-full size-50" />
             </div>

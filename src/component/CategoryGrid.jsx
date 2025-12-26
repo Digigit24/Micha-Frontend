@@ -54,7 +54,7 @@ const CategoryGrid = () => {
                     <h2 className="font-heading text-3xl md:text-5xl text-[var(--color-text-primary)] mb-4">
                         Curated Categories
                     </h2>
-                    <p className="font-body text-[var(--color-text-secondary)] tracking-wide uppercase text-sm">
+                    <p className="font-body text-[var(--color-text-secondary)] tracking-wide uppercase text-sm ">
                         Explore Our Essentials
                     </p>
                 </div>
